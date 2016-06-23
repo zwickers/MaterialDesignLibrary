@@ -146,5 +146,25 @@ public class ButtonRectangle extends Button {
 			invalidate();
 		}
 	}
-	
+    
+    
+    // --- Override setText(), setTextColor(), getTextView(), getText() --- //
+    // --- otherwise these methods don't work correctly on ButtonRectangle --- //
+    public void setText(String text) {
+        textButton.setText(text);
+    }
+
+    public void setTextColor(int color) {
+        textButton.setTextColor(color);
+    }
+
+    public TextView getTextView() {
+        return textButton;
+    }
+
+    public String getText() {
+        return textButton.getText().toString();
+    }
+    
+    
 }
